@@ -8,13 +8,16 @@ import java.math.BigDecimal;
  */
 public class App {
     public static void main(String[] args) {
-        BigDecimal addition = Calculator.operation(OperationType.ADDITION, BigDecimal.TEN, BigDecimal.ONE);
-        BigDecimal subtract = Calculator.operation(OperationType.SUBTRACTION, BigDecimal.TEN, BigDecimal.ONE);
-        BigDecimal pow = Calculator.operation(OperationType.SUBTRACTION, BigDecimal.TEN, BigDecimal.valueOf(2));
+        BigDecimal addition = Calculator.operation(new AdditionCommand(), BigDecimal.TEN, BigDecimal.valueOf(3));
+        BigDecimal subtract = Calculator.operation(new SubtractCommand(), BigDecimal.TEN, BigDecimal.valueOf(3));
+        BigDecimal pow = Calculator.operation(new PowCommand(), BigDecimal.TEN, BigDecimal.valueOf(3));
+        BigDecimal reminder = Calculator.operation(new ReminderCommand(), BigDecimal.TEN, BigDecimal.valueOf(3));
+
 
         System.out.println("Addition: " + addition);
         System.out.println("Subtract: " + subtract);
         System.out.println("Pow: " + pow);
+        System.out.println("Reminder: " + reminder);
 
     }
 }

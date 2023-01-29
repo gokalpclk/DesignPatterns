@@ -7,7 +7,11 @@ import java.math.BigDecimal;
  * @project DesignPatterns
  */
 public class Calculator {
-    public static BigDecimal operation(OperationType operationType, BigDecimal num1, BigDecimal num2) {
+    public static BigDecimal operation(Operation operation, BigDecimal num1, BigDecimal num2){
+        BigDecimal result = operation.operation(num1, num2);
+        return result;
+    }
+/*    public static BigDecimal operation(OperationType operationType, BigDecimal num1, BigDecimal num2) {
         BigDecimal result = BigDecimal.ZERO;
         if (OperationType.ADDITION.equals(operationType)) {
             result = num1.add(num2);
@@ -23,5 +27,5 @@ public class Calculator {
             result = num1.remainder(num2);
         }
         return result;
-    }
+    }*/
 }
