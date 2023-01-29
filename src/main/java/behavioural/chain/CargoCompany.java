@@ -37,14 +37,13 @@ public abstract class CargoCompany {
     }
 
 
-    private void completedInformation() {
-        System.out.println("Shipping has been completed");
-    }
-
-
 
     private void outOfServiceArea(City city) {
         System.out.println(city.getCity() + "is out of service area");
+    }
+
+    private void completedInformation() {
+        System.out.println("Shipping has been completed");
     }
 
 
